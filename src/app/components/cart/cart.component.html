@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="text-center my-5" *ngIf="items.length == 0">
+        <h4>Your cart is Empty</h4>
+        <button class="btn btn-primary btn-lg mt-3" routerLink="/">Go to Shop</button>
+    </div>
+
+    <div *ngIf="items.length > 0">
+        <h1>Cart</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr *ngFor="let item of items">
+                <td>{{item.title}}</td>
+                <td>1</td>
+                <td>{{1 * item.price | currency: "USD"}} </td>
+            </tr>
+
+            <!-- <tr>
+                <td class="text-right" colspan="2">
+                    <strong>Subtotal:</strong>
+                </td>
+
+                <td></td>
+            </tr> -->
+
+            <!-- <tr>
+                <td class="text-right" colspan="2">
+                    <strong>Taxes:</strong>
+                </td>
+
+                <td>2%</td>
+            </tr>
+
+            <tr>
+                <td class="text-right" colspan="2">
+                    <strong>Total:</strong>
+                </td>
+
+                <td>102</td>
+            </tr>
+
+            <tr>
+                <td colspan="2"></td>
+                <td><button class="btn btn-success" >Checkout</button></td>
+            </tr> -->
+            </tbody>
+        </table>
+    </div>
+</div>
