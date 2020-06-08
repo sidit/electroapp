@@ -8,6 +8,7 @@ export class MessengerService {
 
   subject = new Subject();
   items = [];
+  item = 0;
   
 
   constructor() { }
@@ -20,6 +21,18 @@ export class MessengerService {
 
   getItems() {
     return this.items;
+  }
+
+
+  // 2nd
+  calVal(val){
+    this.item  += val;
+    console.log(this.item);
+  }
+
+  getVal(){
+    return this.item;
+    console.log(this.item);
   }
 
 }

@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class CartComponent implements OnInit {
   
   items: IProduct[];
-  
+  xyz= 0;
 
   constructor(
     private msg : MessengerService 
@@ -20,6 +20,8 @@ export class CartComponent implements OnInit {
     this.items = this.msg.getItems();
     console.log(this.items);
     console.log(this.items.length);
+    this.xyz = this.msg.getVal();
+    console.log(this.xyz);
     
   }
     

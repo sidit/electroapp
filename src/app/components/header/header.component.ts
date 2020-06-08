@@ -18,7 +18,12 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = this.msg.getItems();
-
+    this.xyz = this.msg.getVal();
+    console.log(this.xyz);
+  }
+  
+  GetVal(){
+    this.xyz = this.msg.getVal();
   }
 
   

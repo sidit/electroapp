@@ -88,6 +88,7 @@
 												[class.disabled]="p.stock > 100"
 												[class.btn-outline-danger] = "p.stock > 100"
 												(click)="handleAddToCart(p)"
+												(click)="calval(p.price)"
 											>
 												{{p.stock > 100 ? "No Stock" : "Add To Cart"}}
 											</button>

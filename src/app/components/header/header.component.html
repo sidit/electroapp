@@ -52,7 +52,7 @@
 
 								<!-- Cart -->
 								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" (click)="GetVal()">
 										<i class="fa fa-shopping-cart">({{items.length}})</i>
 										<span>Your Cart</span>
 										<div class="qty"></div>
@@ -73,7 +73,7 @@
 										</div>
 										<div class="cart-summary">
 											<small>{{items.length}} Item(s) selected</small>
-											<h5>SUBTOTAL: {{0 | currency: 'USD'}}</h5>
+											<h5>SUBTOTAL: {{xyz | currency: 'USD'}}</h5>
 										</div>
 										<div class="cart-btns">
 											<a routerLink="/cart">View Cart</a>

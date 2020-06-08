@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
 
   products: IProduct[] = [];
   productItem : IProduct;
+  prod : number
   
   constructor(
     private productservice : ProductService,
@@ -32,5 +33,9 @@ export class HomeComponent implements OnInit {
 
   handleAddToCart(product){
     this.msg.addToCart(product);
+  }
+
+  calval(prod){
+    this.msg.calVal(prod);
   }
 }
